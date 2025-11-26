@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador MOS Completo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="wt__mos-title">Generador de Momentos de Simetría (MOS) - Versión Legacy</h1>
+    <button id="themeToggle" class="theme-toggle-btn">OSCURO</button>
+    
+    <div class="wt__credits">
+        Este proyecto se hizo gracias a información consultada en el repositorio:
+        <a href="https://github.com/diegovdc/erv-web">erv-web</a>
+        El cual está basado en el trabajo de Erv Wilson.
+    </div>
+    
+    <div class="info-box">
+        Un Momento de Simetría (MOS) es una escala musical generada mediante 
+        la repetición de un intervalo generador dentro de un período. Este sistema fue desarrollado 
+        por el teórico Erv Wilson y es útil para crear escalas musicales.
+    </div>
+    
+    <div class="wt__mos-form">
+        <label>
+            <span>Período <small>(determina el número de grados en la escala)</small></span>
+            <input type="number" class="wt__mos-form-input" id="period" value="12" placeholder="12" min="2" max="120">
+        </label>
+        <label>
+            <span>Generador</span>
+            <input type="number" class="wt__mos-form-input" id="generator" value="7" placeholder="7" min="1" max="120">
+        </label>
+        <button class="wt__mos-form-button" onclick="calculateMOS()">Calcular MOS</button>
+    </div>
+
+    <div id="mos-results" class="result-section"></div>
+    <div id="secondary-mos-results" class="result-section"></div>
+
+    <script src="js/mos-core.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
+
